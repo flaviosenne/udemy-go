@@ -38,4 +38,28 @@ func main() {
 	array2[1] = "Posição alterada"
 	fmt.Println(slice2)
 
+	// arrays internos
+	fmt.Println("---------")
+	slice3 := make([]float32, 10, 11)
+	fmt.Println(slice3)
+	fmt.Println(len(slice3)) //length
+	fmt.Println(cap(slice3)) //capacidade
+
+	slice3 = append(slice3, 5)
+	fmt.Println(slice3)
+	// como nesse ponto iria estourar o tamanho máximo, debaixo dos panos,
+	//a capacidade é aumentada aparentando ser dinamica
+	slice3 = append(slice3, 5)
+	fmt.Println(slice3)
+	fmt.Println(len(slice3))
+	fmt.Println(cap(slice3))
+
+	slice4 := make([]float32, 5)
+	fmt.Println(slice4)
+	fmt.Println(len(slice4))
+	fmt.Println(cap(slice4))
+	slice4 = append(slice4, 10)
+	fmt.Println(len(slice4))
+	fmt.Println(cap(slice4))
+
 }
